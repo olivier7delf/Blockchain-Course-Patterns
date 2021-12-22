@@ -1,0 +1,15 @@
+
+geth --networkid 1015 --datadir "./data" --bootnodes "enode://e221f6c754092ed40d1cc0b155733a1c0c8335642e45026dfb05896c8eb92d071d0d6b43e9c3c4c45a43ab0980668db1c599fec100c6ee241a8afdb2b6c81366@127.0.0.1:0?discport=30310"  --port  30303 --ipcdisable --syncmode full --http --http.corsdomain "*" --http.port 8545 --allow-insecure-unlock --mine console
+admin.peers
+personal.acc
+personal.list_wallet()
+personal.personal.getListWallets
+personal.getListWallets
+personal.getListWallets()
+personal.personal.listAccounts
+personal.listAccounts
+eth.accounts[0]
+personal.listAccounts
+eth.accounts[0]
+eth.account[0]
+eth.accounts[0]

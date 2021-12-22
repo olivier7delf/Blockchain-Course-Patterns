@@ -1,0 +1,3267 @@
+{
+  "contractName": "NameRegistry",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "conAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "ver",
+          "type": "uint16"
+        }
+      ],
+      "name": "registerName",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getContractInfo",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "removeContract",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"}],\"name\":\"getContractInfo\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"conAddress\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"ver\",\"type\":\"uint16\"}],\"name\":\"registerName\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"removeContract\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"Creates a registry for contracts*\"}},\"settings\":{\"compilationTarget\":{\"project:/contracts/NameRegistry.sol\":\"NameRegistry\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/NameRegistry.sol\":{\"keccak256\":\"0x492a7dcff2729dc64dde38e4be8baa1fb28b63440ec9b5077b83fc91279563b5\",\"urls\":[\"bzz-raw://bcabca5cb815a708ddfa6060f3b04064718645b463468611afcaf7b5d94529bc\",\"dweb:/ipfs/QmVtk3UeQcZ6MV5Abai55ERLtQTVwbVHdWWd8f3EDCBs2q\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610459806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80630958f83d14610046578063613e2de2146100ba578063fe389e0914610137575b600080fd5b6100a06004803603606081101561005c57600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803561ffff169060200190929190505050610159565b604051808215151515815260200191505060405180910390f35b6100e6600480360360208110156100d057600080fd5b81019080803590602001909291905050506103b6565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018261ffff1661ffff1681526020019250505060405180910390f35b61013f61041c565b604051808215151515815260200191505060405180910390f35b600060018261ffff16101561016d57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff1660008086815260200190815260200160002060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156102b4573360008086815260200190815260200160002060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508260008086815260200190815260200160002060010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508160008086815260200190815260200160002060010160146101000a81548161ffff021916908361ffff1602179055506103aa565b3373ffffffffffffffffffffffffffffffffffffffff1660008086815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161461032557600090506103af565b8260008086815260200190815260200160002060010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508160008086815260200190815260200160002060010160146101000a81548161ffff021916908361ffff1602179055505b600190505b9392505050565b60008060008084815260200190815260200160002060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1660008085815260200190815260200160002060010160149054906101000a900461ffff1691509150915091565b60008090509056fea265627a7a723158208d8856a6019cfc90c610da7b8b5c352c5b094fab4f999321e47eb40504fed74564736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80630958f83d14610046578063613e2de2146100ba578063fe389e0914610137575b600080fd5b6100a06004803603606081101561005c57600080fd5b8101908080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803561ffff169060200190929190505050610159565b604051808215151515815260200191505060405180910390f35b6100e6600480360360208110156100d057600080fd5b81019080803590602001909291905050506103b6565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018261ffff1661ffff1681526020019250505060405180910390f35b61013f61041c565b604051808215151515815260200191505060405180910390f35b600060018261ffff16101561016d57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff1660008086815260200190815260200160002060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156102b4573360008086815260200190815260200160002060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508260008086815260200190815260200160002060010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508160008086815260200190815260200160002060010160146101000a81548161ffff021916908361ffff1602179055506103aa565b3373ffffffffffffffffffffffffffffffffffffffff1660008086815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161461032557600090506103af565b8260008086815260200190815260200160002060010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508160008086815260200190815260200160002060010160146101000a81548161ffff021916908361ffff1602179055505b600190505b9392505050565b60008060008084815260200190815260200160002060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1660008085815260200190815260200160002060010160149054906101000a900461ffff1691509150915091565b60008090509056fea265627a7a723158208d8856a6019cfc90c610da7b8b5c352c5b094fab4f999321e47eb40504fed74564736f6c63430005100032",
+  "sourceMap": "71:1395:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:1395:2;;;;;;;",
+  "deployedSourceMap": "71:1395:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:1395:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;524:581;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;524:581:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1191:152;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1191:152:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1349:114;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;524:581;609:4;678:1;672:3;:7;;;669:20;;;681:8;;;669:20;742:1;703:41;;:8;:14;712:4;703:14;;;;;;;;;;;:27;;;;;;;;;;;;:41;;;700:378;;;782:10;759:8;:14;768:4;759:14;;;;;;;;;;;:20;;;:33;;;;;;;;;;;;;;;;;;836:10;806:8;:14;815:4;806:14;;;;;;;;;;;:27;;;:40;;;;;;;;;;;;;;;;;;885:3;860:8;:14;869:4;860:14;;;;;;;;;;;:22;;;:28;;;;;;;;;;;;;;;;;;700:378;;;946:10;922:34;;:8;:14;931:4;922:14;;;;;;;;;;;:20;;;;;;;;;;;;:34;;;919:52;;966:5;959:12;;;;919:52;1015:10;985:8;:14;994:4;985:14;;;;;;;;;;;:27;;;:40;;;;;;;;;;;;;;;;;;1064:3;1039:8;:14;1048:4;1039:14;;;;;;;;;;;:22;;;:28;;;;;;;;;;;;;;;;;;700:378;1094:4;1087:11;;524:581;;;;;;:::o;1191:152::-;1251:7;1259:6;1284:8;:14;1293:4;1284:14;;;;;;;;;;;:27;;;;;;;;;;;;1313:8;:14;1322:4;1313:14;;;;;;;;;;;:22;;;;;;;;;;;;1276:60;;;;1191:152;;;:::o;1349:114::-;1396:4;1451:5;1444:12;;1349:114;:::o",
+  "source": "pragma solidity ^0.5.16;\n\n/**\n * Creates a registry for contracts\n **/\ncontract NameRegistry {\n\n    // Manages info about the contract instance\n    struct ContractInfo {\n        address   owner;\n        address   contractInst;\n        // The first version added to registry MUST be >= 1\n        // Otherwise the name will NOT be added\n        uint16    version;\n    }\n\n    // Manages the name to address mapping\n    mapping(bytes32 => ContractInfo)  nameInfo;\n\n    // Adds the version of the contract to be used by apps\n    function  registerName(bytes32 name, address conAddress, uint16  ver) public returns(bool){\n\n        // Version MUST start with number 1\n        if(ver < 1) revert();\n\n        if(nameInfo[name].contractInst == address(0)){\n            nameInfo[name].owner = msg.sender;\n            nameInfo[name].contractInst = conAddress;\n            nameInfo[name].version = ver;\n        } else {\n            if(nameInfo[name].owner != msg.sender)  return false;\n            nameInfo[name].contractInst = conAddress;\n            nameInfo[name].version = ver;\n        }\n        return true;\n    }\n\n    // Contracts having a dependency on this contract will invoke this function\n    function  getContractInfo(bytes32 name) public view returns(address,uint16){\n        return (nameInfo[name].contractInst, nameInfo[name].version);\n    }\n\n    function  removeContract() public pure returns(bool){\n        // Code this on your own\n        return false;\n    }\n\n}\n",
+  "sourcePath": "/Users/olivier/Documents/code/olivier7delf/Blockchain-Course-Patterns/contracts/NameRegistry.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/NameRegistry.sol",
+    "exportedSymbols": {
+      "NameRegistry": [
+        387
+      ]
+    },
+    "id": 388,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 269,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "Creates a registry for contracts*",
+        "fullyImplemented": true,
+        "id": 387,
+        "linearizedBaseContracts": [
+          387
+        ],
+        "name": "NameRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "NameRegistry.ContractInfo",
+            "id": 276,
+            "members": [
+              {
+                "constant": false,
+                "id": 271,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 276,
+                "src": "178:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 270,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "178:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 273,
+                "name": "contractInst",
+                "nodeType": "VariableDeclaration",
+                "scope": 276,
+                "src": "203:22:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 272,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "203:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 275,
+                "name": "version",
+                "nodeType": "VariableDeclaration",
+                "scope": 276,
+                "src": "343:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint16",
+                  "typeString": "uint16"
+                },
+                "typeName": {
+                  "id": 274,
+                  "name": "uint16",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "343:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ContractInfo",
+            "nodeType": "StructDefinition",
+            "scope": 387,
+            "src": "148:219:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 280,
+            "name": "nameInfo",
+            "nodeType": "VariableDeclaration",
+            "scope": 387,
+            "src": "416:42:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+              "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo)"
+            },
+            "typeName": {
+              "id": 279,
+              "keyType": {
+                "id": 277,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "424:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "416:32:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 278,
+                "name": "ContractInfo",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 276,
+                "src": "435:12:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_ContractInfo_$276_storage_ptr",
+                  "typeString": "struct NameRegistry.ContractInfo"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 357,
+              "nodeType": "Block",
+              "src": "614:491:2",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    },
+                    "id": 293,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 291,
+                      "name": "ver",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 286,
+                      "src": "672:3:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 292,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "678:1:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "672:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 297,
+                  "nodeType": "IfStatement",
+                  "src": "669:20:2",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 294,
+                        "name": "revert",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [
+                          762,
+                          763
+                        ],
+                        "referencedDeclaration": 762,
+                        "src": "681:6:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 295,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "681:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 296,
+                    "nodeType": "ExpressionStatement",
+                    "src": "681:8:2"
+                  }
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 305,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 298,
+                          "name": "nameInfo",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 280,
+                          "src": "703:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                            "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                          }
+                        },
+                        "id": 300,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 299,
+                          "name": "name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 282,
+                          "src": "712:4:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "703:14:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                          "typeString": "struct NameRegistry.ContractInfo storage ref"
+                        }
+                      },
+                      "id": 301,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "contractInst",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 273,
+                      "src": "703:27:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 303,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "742:1:2",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 302,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "734:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 304,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "734:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "703:41:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 353,
+                    "nodeType": "Block",
+                    "src": "905:173:2",
+                    "statements": [
+                      {
+                        "condition": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "id": 335,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 329,
+                                "name": "nameInfo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 280,
+                                "src": "922:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                                  "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                                }
+                              },
+                              "id": 331,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 330,
+                                "name": "name",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 282,
+                                "src": "931:4:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "922:14:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                                "typeString": "struct NameRegistry.ContractInfo storage ref"
+                              }
+                            },
+                            "id": 332,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "owner",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 271,
+                            "src": "922:20:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "!=",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 333,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 757,
+                              "src": "946:3:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 334,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "946:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "src": "922:34:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "falseBody": null,
+                        "id": 338,
+                        "nodeType": "IfStatement",
+                        "src": "919:52:2",
+                        "trueBody": {
+                          "expression": {
+                            "argumentTypes": null,
+                            "hexValue": "66616c7365",
+                            "id": 336,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "bool",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "966:5:2",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            },
+                            "value": "false"
+                          },
+                          "functionReturnParameters": 290,
+                          "id": 337,
+                          "nodeType": "Return",
+                          "src": "959:12:2"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 344,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 339,
+                                "name": "nameInfo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 280,
+                                "src": "985:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                                  "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                                }
+                              },
+                              "id": 341,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 340,
+                                "name": "name",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 282,
+                                "src": "994:4:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "985:14:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                                "typeString": "struct NameRegistry.ContractInfo storage ref"
+                              }
+                            },
+                            "id": 342,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "contractInst",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 273,
+                            "src": "985:27:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 343,
+                            "name": "conAddress",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 284,
+                            "src": "1015:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "src": "985:40:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 345,
+                        "nodeType": "ExpressionStatement",
+                        "src": "985:40:2"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 351,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 346,
+                                "name": "nameInfo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 280,
+                                "src": "1039:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                                  "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                                }
+                              },
+                              "id": 348,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 347,
+                                "name": "name",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 282,
+                                "src": "1048:4:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1039:14:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                                "typeString": "struct NameRegistry.ContractInfo storage ref"
+                              }
+                            },
+                            "id": 349,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "version",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 275,
+                            "src": "1039:22:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint16",
+                              "typeString": "uint16"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 350,
+                            "name": "ver",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 286,
+                            "src": "1064:3:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint16",
+                              "typeString": "uint16"
+                            }
+                          },
+                          "src": "1039:28:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint16",
+                            "typeString": "uint16"
+                          }
+                        },
+                        "id": 352,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1039:28:2"
+                      }
+                    ]
+                  },
+                  "id": 354,
+                  "nodeType": "IfStatement",
+                  "src": "700:378:2",
+                  "trueBody": {
+                    "id": 328,
+                    "nodeType": "Block",
+                    "src": "745:154:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 312,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 306,
+                                "name": "nameInfo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 280,
+                                "src": "759:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                                  "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                                }
+                              },
+                              "id": 308,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 307,
+                                "name": "name",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 282,
+                                "src": "768:4:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "759:14:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                                "typeString": "struct NameRegistry.ContractInfo storage ref"
+                              }
+                            },
+                            "id": 309,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "owner",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 271,
+                            "src": "759:20:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 310,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 757,
+                              "src": "782:3:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 311,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "782:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "src": "759:33:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 313,
+                        "nodeType": "ExpressionStatement",
+                        "src": "759:33:2"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 319,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 314,
+                                "name": "nameInfo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 280,
+                                "src": "806:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                                  "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                                }
+                              },
+                              "id": 316,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 315,
+                                "name": "name",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 282,
+                                "src": "815:4:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "806:14:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                                "typeString": "struct NameRegistry.ContractInfo storage ref"
+                              }
+                            },
+                            "id": 317,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "contractInst",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 273,
+                            "src": "806:27:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 318,
+                            "name": "conAddress",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 284,
+                            "src": "836:10:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "src": "806:40:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 320,
+                        "nodeType": "ExpressionStatement",
+                        "src": "806:40:2"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 326,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 321,
+                                "name": "nameInfo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 280,
+                                "src": "860:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                                  "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                                }
+                              },
+                              "id": 323,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 322,
+                                "name": "name",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 282,
+                                "src": "869:4:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "860:14:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                                "typeString": "struct NameRegistry.ContractInfo storage ref"
+                              }
+                            },
+                            "id": 324,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "version",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 275,
+                            "src": "860:22:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint16",
+                              "typeString": "uint16"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "id": 325,
+                            "name": "ver",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 286,
+                            "src": "885:3:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint16",
+                              "typeString": "uint16"
+                            }
+                          },
+                          "src": "860:28:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint16",
+                            "typeString": "uint16"
+                          }
+                        },
+                        "id": 327,
+                        "nodeType": "ExpressionStatement",
+                        "src": "860:28:2"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 355,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1094:4:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 290,
+                  "id": 356,
+                  "nodeType": "Return",
+                  "src": "1087:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 358,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerName",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 287,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 282,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 358,
+                  "src": "547:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 281,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 284,
+                  "name": "conAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 358,
+                  "src": "561:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 283,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "561:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 286,
+                  "name": "ver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 358,
+                  "src": "581:11:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 285,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "581:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:47:2"
+            },
+            "returnParameters": {
+              "id": 290,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 289,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 358,
+                  "src": "609:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 288,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "609:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "608:6:2"
+            },
+            "scope": 387,
+            "src": "524:581:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 377,
+              "nodeType": "Block",
+              "src": "1266:77:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 367,
+                            "name": "nameInfo",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 280,
+                            "src": "1284:8:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                              "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                            }
+                          },
+                          "id": 369,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 368,
+                            "name": "name",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 360,
+                            "src": "1293:4:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1284:14:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                            "typeString": "struct NameRegistry.ContractInfo storage ref"
+                          }
+                        },
+                        "id": 370,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "contractInst",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 273,
+                        "src": "1284:27:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 371,
+                            "name": "nameInfo",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 280,
+                            "src": "1313:8:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_ContractInfo_$276_storage_$",
+                              "typeString": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)"
+                            }
+                          },
+                          "id": 373,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 372,
+                            "name": "name",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 360,
+                            "src": "1322:4:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1313:14:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_ContractInfo_$276_storage",
+                            "typeString": "struct NameRegistry.ContractInfo storage ref"
+                          }
+                        },
+                        "id": 374,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "version",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 275,
+                        "src": "1313:22:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint16",
+                          "typeString": "uint16"
+                        }
+                      }
+                    ],
+                    "id": 375,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1283:53:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_uint16_$",
+                      "typeString": "tuple(address,uint16)"
+                    }
+                  },
+                  "functionReturnParameters": 366,
+                  "id": 376,
+                  "nodeType": "Return",
+                  "src": "1276:60:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 378,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getContractInfo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 361,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 360,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 378,
+                  "src": "1217:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 359,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1217:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1216:14:2"
+            },
+            "returnParameters": {
+              "id": 366,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 363,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 378,
+                  "src": "1251:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 362,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1251:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 365,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 378,
+                  "src": "1259:6:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 364,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1259:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1250:16:2"
+            },
+            "scope": 387,
+            "src": "1191:152:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 385,
+              "nodeType": "Block",
+              "src": "1401:62:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "66616c7365",
+                    "id": 383,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1451:5:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "false"
+                  },
+                  "functionReturnParameters": 382,
+                  "id": 384,
+                  "nodeType": "Return",
+                  "src": "1444:12:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 386,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeContract",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 379,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1373:2:2"
+            },
+            "returnParameters": {
+              "id": 382,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 381,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 386,
+                  "src": "1396:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 380,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1396:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1395:6:2"
+            },
+            "scope": 387,
+            "src": "1349:114:2",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 388,
+        "src": "71:1395:2"
+      }
+    ],
+    "src": "0:1467:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/NameRegistry.sol",
+      "exportedSymbols": {
+        "NameRegistry": [
+          387
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 269,
+        "name": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "Creates a registry for contracts*",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            387
+          ],
+          "name": "NameRegistry",
+          "scope": 388
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "NameRegistry.ContractInfo",
+              "name": "ContractInfo",
+              "scope": 387,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "owner",
+                  "scope": 276,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 270,
+                    "name": "ElementaryTypeName",
+                    "src": "178:7:2"
+                  }
+                ],
+                "id": 271,
+                "name": "VariableDeclaration",
+                "src": "178:15:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "contractInst",
+                  "scope": 276,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 272,
+                    "name": "ElementaryTypeName",
+                    "src": "203:7:2"
+                  }
+                ],
+                "id": 273,
+                "name": "VariableDeclaration",
+                "src": "203:22:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "version",
+                  "scope": 276,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint16",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint16",
+                      "type": "uint16"
+                    },
+                    "id": 274,
+                    "name": "ElementaryTypeName",
+                    "src": "343:6:2"
+                  }
+                ],
+                "id": 275,
+                "name": "VariableDeclaration",
+                "src": "343:17:2"
+              }
+            ],
+            "id": 276,
+            "name": "StructDefinition",
+            "src": "148:219:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "nameInfo",
+              "scope": 387,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(bytes32 => struct NameRegistry.ContractInfo)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(bytes32 => struct NameRegistry.ContractInfo)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 277,
+                    "name": "ElementaryTypeName",
+                    "src": "424:7:2"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "ContractInfo",
+                      "referencedDeclaration": 276,
+                      "type": "struct NameRegistry.ContractInfo"
+                    },
+                    "id": 278,
+                    "name": "UserDefinedTypeName",
+                    "src": "435:12:2"
+                  }
+                ],
+                "id": 279,
+                "name": "Mapping",
+                "src": "416:32:2"
+              }
+            ],
+            "id": 280,
+            "name": "VariableDeclaration",
+            "src": "416:42:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "registerName",
+              "scope": 387,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "name",
+                      "scope": 358,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 281,
+                        "name": "ElementaryTypeName",
+                        "src": "547:7:2"
+                      }
+                    ],
+                    "id": 282,
+                    "name": "VariableDeclaration",
+                    "src": "547:12:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "conAddress",
+                      "scope": 358,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 283,
+                        "name": "ElementaryTypeName",
+                        "src": "561:7:2"
+                      }
+                    ],
+                    "id": 284,
+                    "name": "VariableDeclaration",
+                    "src": "561:18:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "ver",
+                      "scope": 358,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint16",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint16",
+                          "type": "uint16"
+                        },
+                        "id": 285,
+                        "name": "ElementaryTypeName",
+                        "src": "581:6:2"
+                      }
+                    ],
+                    "id": 286,
+                    "name": "VariableDeclaration",
+                    "src": "581:11:2"
+                  }
+                ],
+                "id": 287,
+                "name": "ParameterList",
+                "src": "546:47:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 358,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 288,
+                        "name": "ElementaryTypeName",
+                        "src": "609:4:2"
+                      }
+                    ],
+                    "id": 289,
+                    "name": "VariableDeclaration",
+                    "src": "609:4:2"
+                  }
+                ],
+                "id": 290,
+                "name": "ParameterList",
+                "src": "608:6:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint16",
+                            "typeString": "uint16"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "<",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 286,
+                              "type": "uint16",
+                              "value": "ver"
+                            },
+                            "id": 291,
+                            "name": "Identifier",
+                            "src": "672:3:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 292,
+                            "name": "Literal",
+                            "src": "678:1:2"
+                          }
+                        ],
+                        "id": 293,
+                        "name": "BinaryOperation",
+                        "src": "672:7:2"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "tuple()",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    null
+                                  ],
+                                  "overloadedDeclarations": [
+                                    762,
+                                    763
+                                  ],
+                                  "referencedDeclaration": 762,
+                                  "type": "function () pure",
+                                  "value": "revert"
+                                },
+                                "id": 294,
+                                "name": "Identifier",
+                                "src": "681:6:2"
+                              }
+                            ],
+                            "id": 295,
+                            "name": "FunctionCall",
+                            "src": "681:8:2"
+                          }
+                        ],
+                        "id": 296,
+                        "name": "ExpressionStatement",
+                        "src": "681:8:2"
+                      }
+                    ],
+                    "id": 297,
+                    "name": "IfStatement",
+                    "src": "669:20:2"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "contractInst",
+                              "referencedDeclaration": 273,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct NameRegistry.ContractInfo storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 280,
+                                      "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                      "value": "nameInfo"
+                                    },
+                                    "id": 298,
+                                    "name": "Identifier",
+                                    "src": "703:8:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 282,
+                                      "type": "bytes32",
+                                      "value": "name"
+                                    },
+                                    "id": 299,
+                                    "name": "Identifier",
+                                    "src": "712:4:2"
+                                  }
+                                ],
+                                "id": 300,
+                                "name": "IndexAccess",
+                                "src": "703:14:2"
+                              }
+                            ],
+                            "id": 301,
+                            "name": "MemberAccess",
+                            "src": "703:27:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "address payable",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_rational_0_by_1",
+                                      "typeString": "int_const 0"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)",
+                                  "value": "address"
+                                },
+                                "id": 302,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "734:7:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 303,
+                                "name": "Literal",
+                                "src": "742:1:2"
+                              }
+                            ],
+                            "id": 304,
+                            "name": "FunctionCall",
+                            "src": "734:10:2"
+                          }
+                        ],
+                        "id": 305,
+                        "name": "BinaryOperation",
+                        "src": "703:41:2"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "owner",
+                                      "referencedDeclaration": 271,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct NameRegistry.ContractInfo storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 280,
+                                              "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                              "value": "nameInfo"
+                                            },
+                                            "id": 306,
+                                            "name": "Identifier",
+                                            "src": "759:8:2"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 282,
+                                              "type": "bytes32",
+                                              "value": "name"
+                                            },
+                                            "id": 307,
+                                            "name": "Identifier",
+                                            "src": "768:4:2"
+                                          }
+                                        ],
+                                        "id": 308,
+                                        "name": "IndexAccess",
+                                        "src": "759:14:2"
+                                      }
+                                    ],
+                                    "id": 309,
+                                    "name": "MemberAccess",
+                                    "src": "759:20:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sender",
+                                      "referencedDeclaration": null,
+                                      "type": "address payable"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 757,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 310,
+                                        "name": "Identifier",
+                                        "src": "782:3:2"
+                                      }
+                                    ],
+                                    "id": 311,
+                                    "name": "MemberAccess",
+                                    "src": "782:10:2"
+                                  }
+                                ],
+                                "id": 312,
+                                "name": "Assignment",
+                                "src": "759:33:2"
+                              }
+                            ],
+                            "id": 313,
+                            "name": "ExpressionStatement",
+                            "src": "759:33:2"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "contractInst",
+                                      "referencedDeclaration": 273,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct NameRegistry.ContractInfo storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 280,
+                                              "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                              "value": "nameInfo"
+                                            },
+                                            "id": 314,
+                                            "name": "Identifier",
+                                            "src": "806:8:2"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 282,
+                                              "type": "bytes32",
+                                              "value": "name"
+                                            },
+                                            "id": 315,
+                                            "name": "Identifier",
+                                            "src": "815:4:2"
+                                          }
+                                        ],
+                                        "id": 316,
+                                        "name": "IndexAccess",
+                                        "src": "806:14:2"
+                                      }
+                                    ],
+                                    "id": 317,
+                                    "name": "MemberAccess",
+                                    "src": "806:27:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 284,
+                                      "type": "address",
+                                      "value": "conAddress"
+                                    },
+                                    "id": 318,
+                                    "name": "Identifier",
+                                    "src": "836:10:2"
+                                  }
+                                ],
+                                "id": 319,
+                                "name": "Assignment",
+                                "src": "806:40:2"
+                              }
+                            ],
+                            "id": 320,
+                            "name": "ExpressionStatement",
+                            "src": "806:40:2"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint16"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "version",
+                                      "referencedDeclaration": 275,
+                                      "type": "uint16"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct NameRegistry.ContractInfo storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 280,
+                                              "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                              "value": "nameInfo"
+                                            },
+                                            "id": 321,
+                                            "name": "Identifier",
+                                            "src": "860:8:2"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 282,
+                                              "type": "bytes32",
+                                              "value": "name"
+                                            },
+                                            "id": 322,
+                                            "name": "Identifier",
+                                            "src": "869:4:2"
+                                          }
+                                        ],
+                                        "id": 323,
+                                        "name": "IndexAccess",
+                                        "src": "860:14:2"
+                                      }
+                                    ],
+                                    "id": 324,
+                                    "name": "MemberAccess",
+                                    "src": "860:22:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 286,
+                                      "type": "uint16",
+                                      "value": "ver"
+                                    },
+                                    "id": 325,
+                                    "name": "Identifier",
+                                    "src": "885:3:2"
+                                  }
+                                ],
+                                "id": 326,
+                                "name": "Assignment",
+                                "src": "860:28:2"
+                              }
+                            ],
+                            "id": 327,
+                            "name": "ExpressionStatement",
+                            "src": "860:28:2"
+                          }
+                        ],
+                        "id": 328,
+                        "name": "Block",
+                        "src": "745:154:2"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "falseBody": null
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "!=",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "owner",
+                                      "referencedDeclaration": 271,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct NameRegistry.ContractInfo storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 280,
+                                              "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                              "value": "nameInfo"
+                                            },
+                                            "id": 329,
+                                            "name": "Identifier",
+                                            "src": "922:8:2"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 282,
+                                              "type": "bytes32",
+                                              "value": "name"
+                                            },
+                                            "id": 330,
+                                            "name": "Identifier",
+                                            "src": "931:4:2"
+                                          }
+                                        ],
+                                        "id": 331,
+                                        "name": "IndexAccess",
+                                        "src": "922:14:2"
+                                      }
+                                    ],
+                                    "id": 332,
+                                    "name": "MemberAccess",
+                                    "src": "922:20:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sender",
+                                      "referencedDeclaration": null,
+                                      "type": "address payable"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 757,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 333,
+                                        "name": "Identifier",
+                                        "src": "946:3:2"
+                                      }
+                                    ],
+                                    "id": 334,
+                                    "name": "MemberAccess",
+                                    "src": "946:10:2"
+                                  }
+                                ],
+                                "id": 335,
+                                "name": "BinaryOperation",
+                                "src": "922:34:2"
+                              },
+                              {
+                                "attributes": {
+                                  "functionReturnParameters": 290
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "66616c7365",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "bool",
+                                      "type": "bool",
+                                      "value": "false"
+                                    },
+                                    "id": 336,
+                                    "name": "Literal",
+                                    "src": "966:5:2"
+                                  }
+                                ],
+                                "id": 337,
+                                "name": "Return",
+                                "src": "959:12:2"
+                              }
+                            ],
+                            "id": 338,
+                            "name": "IfStatement",
+                            "src": "919:52:2"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "contractInst",
+                                      "referencedDeclaration": 273,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct NameRegistry.ContractInfo storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 280,
+                                              "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                              "value": "nameInfo"
+                                            },
+                                            "id": 339,
+                                            "name": "Identifier",
+                                            "src": "985:8:2"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 282,
+                                              "type": "bytes32",
+                                              "value": "name"
+                                            },
+                                            "id": 340,
+                                            "name": "Identifier",
+                                            "src": "994:4:2"
+                                          }
+                                        ],
+                                        "id": 341,
+                                        "name": "IndexAccess",
+                                        "src": "985:14:2"
+                                      }
+                                    ],
+                                    "id": 342,
+                                    "name": "MemberAccess",
+                                    "src": "985:27:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 284,
+                                      "type": "address",
+                                      "value": "conAddress"
+                                    },
+                                    "id": 343,
+                                    "name": "Identifier",
+                                    "src": "1015:10:2"
+                                  }
+                                ],
+                                "id": 344,
+                                "name": "Assignment",
+                                "src": "985:40:2"
+                              }
+                            ],
+                            "id": 345,
+                            "name": "ExpressionStatement",
+                            "src": "985:40:2"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "uint16"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "version",
+                                      "referencedDeclaration": 275,
+                                      "type": "uint16"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct NameRegistry.ContractInfo storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 280,
+                                              "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                              "value": "nameInfo"
+                                            },
+                                            "id": 346,
+                                            "name": "Identifier",
+                                            "src": "1039:8:2"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 282,
+                                              "type": "bytes32",
+                                              "value": "name"
+                                            },
+                                            "id": 347,
+                                            "name": "Identifier",
+                                            "src": "1048:4:2"
+                                          }
+                                        ],
+                                        "id": 348,
+                                        "name": "IndexAccess",
+                                        "src": "1039:14:2"
+                                      }
+                                    ],
+                                    "id": 349,
+                                    "name": "MemberAccess",
+                                    "src": "1039:22:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 286,
+                                      "type": "uint16",
+                                      "value": "ver"
+                                    },
+                                    "id": 350,
+                                    "name": "Identifier",
+                                    "src": "1064:3:2"
+                                  }
+                                ],
+                                "id": 351,
+                                "name": "Assignment",
+                                "src": "1039:28:2"
+                              }
+                            ],
+                            "id": 352,
+                            "name": "ExpressionStatement",
+                            "src": "1039:28:2"
+                          }
+                        ],
+                        "id": 353,
+                        "name": "Block",
+                        "src": "905:173:2"
+                      }
+                    ],
+                    "id": 354,
+                    "name": "IfStatement",
+                    "src": "700:378:2"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 290
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 355,
+                        "name": "Literal",
+                        "src": "1094:4:2"
+                      }
+                    ],
+                    "id": 356,
+                    "name": "Return",
+                    "src": "1087:11:2"
+                  }
+                ],
+                "id": 357,
+                "name": "Block",
+                "src": "614:491:2"
+              }
+            ],
+            "id": 358,
+            "name": "FunctionDefinition",
+            "src": "524:581:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getContractInfo",
+              "scope": 387,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "name",
+                      "scope": 378,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 359,
+                        "name": "ElementaryTypeName",
+                        "src": "1217:7:2"
+                      }
+                    ],
+                    "id": 360,
+                    "name": "VariableDeclaration",
+                    "src": "1217:12:2"
+                  }
+                ],
+                "id": 361,
+                "name": "ParameterList",
+                "src": "1216:14:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 378,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 362,
+                        "name": "ElementaryTypeName",
+                        "src": "1251:7:2"
+                      }
+                    ],
+                    "id": 363,
+                    "name": "VariableDeclaration",
+                    "src": "1251:7:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 378,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint16",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint16",
+                          "type": "uint16"
+                        },
+                        "id": 364,
+                        "name": "ElementaryTypeName",
+                        "src": "1259:6:2"
+                      }
+                    ],
+                    "id": 365,
+                    "name": "VariableDeclaration",
+                    "src": "1259:6:2"
+                  }
+                ],
+                "id": 366,
+                "name": "ParameterList",
+                "src": "1250:16:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 366
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(address,uint16)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "contractInst",
+                              "referencedDeclaration": 273,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct NameRegistry.ContractInfo storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 280,
+                                      "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                      "value": "nameInfo"
+                                    },
+                                    "id": 367,
+                                    "name": "Identifier",
+                                    "src": "1284:8:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 360,
+                                      "type": "bytes32",
+                                      "value": "name"
+                                    },
+                                    "id": 368,
+                                    "name": "Identifier",
+                                    "src": "1293:4:2"
+                                  }
+                                ],
+                                "id": 369,
+                                "name": "IndexAccess",
+                                "src": "1284:14:2"
+                              }
+                            ],
+                            "id": 370,
+                            "name": "MemberAccess",
+                            "src": "1284:27:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "version",
+                              "referencedDeclaration": 275,
+                              "type": "uint16"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct NameRegistry.ContractInfo storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 280,
+                                      "type": "mapping(bytes32 => struct NameRegistry.ContractInfo storage ref)",
+                                      "value": "nameInfo"
+                                    },
+                                    "id": 371,
+                                    "name": "Identifier",
+                                    "src": "1313:8:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 360,
+                                      "type": "bytes32",
+                                      "value": "name"
+                                    },
+                                    "id": 372,
+                                    "name": "Identifier",
+                                    "src": "1322:4:2"
+                                  }
+                                ],
+                                "id": 373,
+                                "name": "IndexAccess",
+                                "src": "1313:14:2"
+                              }
+                            ],
+                            "id": 374,
+                            "name": "MemberAccess",
+                            "src": "1313:22:2"
+                          }
+                        ],
+                        "id": 375,
+                        "name": "TupleExpression",
+                        "src": "1283:53:2"
+                      }
+                    ],
+                    "id": 376,
+                    "name": "Return",
+                    "src": "1276:60:2"
+                  }
+                ],
+                "id": 377,
+                "name": "Block",
+                "src": "1266:77:2"
+              }
+            ],
+            "id": 378,
+            "name": "FunctionDefinition",
+            "src": "1191:152:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "removeContract",
+              "scope": 387,
+              "stateMutability": "pure",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 379,
+                "name": "ParameterList",
+                "src": "1373:2:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 386,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 380,
+                        "name": "ElementaryTypeName",
+                        "src": "1396:4:2"
+                      }
+                    ],
+                    "id": 381,
+                    "name": "VariableDeclaration",
+                    "src": "1396:4:2"
+                  }
+                ],
+                "id": 382,
+                "name": "ParameterList",
+                "src": "1395:6:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 382
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "66616c7365",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "false"
+                        },
+                        "id": 383,
+                        "name": "Literal",
+                        "src": "1451:5:2"
+                      }
+                    ],
+                    "id": 384,
+                    "name": "Return",
+                    "src": "1444:12:2"
+                  }
+                ],
+                "id": 385,
+                "name": "Block",
+                "src": "1401:62:2"
+              }
+            ],
+            "id": 386,
+            "name": "FunctionDefinition",
+            "src": "1349:114:2"
+          }
+        ],
+        "id": 387,
+        "name": "ContractDefinition",
+        "src": "71:1395:2"
+      }
+    ],
+    "id": 388,
+    "name": "SourceUnit",
+    "src": "0:1467:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x708C286B40492eAC29B205B5256B9F522Ee3241C",
+      "transactionHash": "0x4ded008981c2fe26250461fae62e5357da667c753613b737c0de7e31275f20f7"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-05T22:20:51.122Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Creates a registry for contracts*"
+  }
+}
